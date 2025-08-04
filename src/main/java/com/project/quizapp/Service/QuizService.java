@@ -22,13 +22,13 @@ public class QuizService {
     @Autowired
     QuestionRepo questionRepo;
 
-    public ResponseEntity<String> createQuiz(String category, int numQ, String title) {
+    public ResponseEntity<Integer> createQuiz(String category, int numQ, String title) {
         List<Question> questions=questionRepo.findRandomQuesionsByCategory(category,numQ);
             Quiz quiz = new Quiz();
             quiz.setTitle(title);
             quiz.setQuestions(questions);
             quizRepo.save(quiz);
-            return new ResponseEntity<>("success", HttpStatus.CREATED);
+            return new ResponseEntity<>(quiz.getId(), HttpStatus.CREATED);
     }
 
 

@@ -25,4 +25,8 @@ public class Quiz {
     public List<Question> getQuestions() {
         return questions;
     }
+
+    public Integer getId() {
+        return id;
+    }
 }
