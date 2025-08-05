@@ -99,6 +99,12 @@ Body:
 ]
 after submitting this we will get the quiz score.
 
+
+
+Frontend:
+http://localhost:8082/index.html
+By opening this you can access to frontend and then you can create quiz and calculate the score after submitting.
+
 Author
 Divyasree Boli
 
